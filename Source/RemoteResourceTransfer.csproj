@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>RemoteResourceTransfer</RootNamespace>
+    <AssemblyName>RemoteResourceTransfer</AssemblyName>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\GameData\RemoteResourceTransfer\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\GameData\RemoteResourceTransfer\Plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <!--
+    KSP DLL references. Set KSP_DIR env var or pass /p:KSP_DIR=...
+    Common paths:
+      Linux:   ~/.steam/steam/steamapps/common/Kerbal Space Program
+      Windows: C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program
+      Mac:     ~/Library/Application Support/Steam/steamapps/common/Kerbal Space Program
+  -->
+  <PropertyGroup>
+    <KSP_DIR Condition=" '$(KSP_DIR)' == '' And Exists('$(HOME)/.steam/steam/steamapps/common/Kerbal Space Program/KSP_Data/Managed/Assembly-CSharp.dll') ">$(HOME)/.steam/steam/steamapps/common/Kerbal Space Program</KSP_DIR>
+    <KSP_DIR Condition=" '$(KSP_DIR)' == '' And Exists('C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_Data\Managed\Assembly-CSharp.dll') ">C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program</KSP_DIR>
+    <KSP_DIR Condition=" '$(KSP_DIR)' == '' ">/home/jacob/.steam/steam/steamapps/common/Kerbal Space Program</KSP_DIR>
+    <KSP_Data>$(KSP_DIR)/KSP_Data/Managed</KSP_Data>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(KSP_Data)/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(KSP_Data)/UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(KSP_Data)/UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(KSP_Data)/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(KSP_Data)/UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(KSP_Data)/UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(KSP_Data)/UnityEngine.AnimationModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+
+
+</Project>

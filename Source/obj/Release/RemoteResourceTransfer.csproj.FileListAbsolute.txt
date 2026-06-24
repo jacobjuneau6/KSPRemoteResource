@@ -1,0 +1,5 @@
+/home/jacob/stardance/KSPRemoteResource/Source/obj/Release/RemoteResourceTransfer.csproj.AssemblyReference.cache
+/home/jacob/stardance/KSPRemoteResource/Source/obj/Release/RemoteResourceTransfer.GeneratedMSBuildEditorConfig.editorconfig
+/home/jacob/stardance/KSPRemoteResource/Source/obj/Release/RemoteResourceTransfer.csproj.CoreCompileInputs.cache
+/home/jacob/stardance/KSPRemoteResource/GameData/RemoteResourceTransfer/Plugins/RemoteResourceTransfer.dll
+/home/jacob/stardance/KSPRemoteResource/Source/obj/Release/RemoteResourceTransfer.dll
