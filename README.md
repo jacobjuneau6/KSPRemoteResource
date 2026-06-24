@@ -4,6 +4,13 @@ Wireless resource transfer between unconnected vessels within 1 km — landed, s
 
 **KSP 1.12.x** · **No dependencies** · **MIT**
 
+# Demo
+
+https://github.com/user-attachments/assets/492513e3-38ee-4c3c-842e-56716e2f7e97
+
+
+
+
 ## Features
 
 - **Wireless transfer** — select source/destination vessels and transfer resources with sliders
@@ -17,7 +24,7 @@ Wireless resource transfer between unconnected vessels within 1 km — landed, s
 
 ## Installation
 
-1. Download `RemoteResourceTransfer-*.zip` from the [latest release](https://github.com/jacobjuneau6/KSPRemoteResource/releases/latest)
+1. Download `RemoteResourceTransfer.zip` from the [latest release](https://github.com/jacobjuneau6/KSPRemoteResource/releases/latest)
 2. Extract into your KSP `GameData/` folder
 3. Launch KSP → enter Flight scene → click the green arrow toolbar button
 
@@ -25,11 +32,7 @@ Wireless resource transfer between unconnected vessels within 1 km — landed, s
 KSP_install/
   GameData/
     RemoteResourceTransfer/
-      Plugins/
-        RemoteResourceTransfer.dll
-      Localization/
-        en-us.cfg
-      RemoteResourceTransfer.version
+      RemoteResourceTransfer.dll
 ```
 
 ## Usage
